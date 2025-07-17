@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New Device Login Alert</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .footer {
+        margin-top: 30px;
+        font-size: 12px;
+        color: #777;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>New Device Login Detected! 🔐</h2>
+
+      <p>Hello {{name}},</p>
+      <p>We noticed a login to your account from a new device or location:</p>
+
+      <ul>
+        <li><strong>IP Address:</strong> {{ip}}</li>
+        <li><strong>Device:</strong> {{device}}</li>
+        <li><strong>Location:</strong> {{location}}</li>
+        <li><strong>Date & Time:</strong> {{time}}</li>
+      </ul>
+
+      <p>If this was you, you can safely ignore this email. Otherwise, we
+        recommend updating your password immediately.</p>
+
+      <div class="button-container">
+        <a href="{{securitySettingsUrl}}" class="btn">Check Account Security</a>
+      </div>
+
+      <p class="footer">
+        Need help? Contact support at support@aestheticsconsults.com.au<br />
+        &copy; {{year}} Aesthetics Consults. All rights reserved.
+      </p>
+    </div>
+  </body>
+</html>
